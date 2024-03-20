@@ -8,62 +8,51 @@ function App() {
   const [score, setScore] = useState(0);
 
   const questions = [
+    //7
     {
-      text: "Cual de los siguientes escenarios describen una forma en la cual un defecto del software puede causar principalmente y directamente daños a una compañia",
+      text: `Considerar los siguientes objetivos. 
+      I. Encontrar los defectos.
+      II. Ganar la confianza en el sistema. 
+      II. Proporcionar información acerca del sistema.
+      IV. Prevenir los defectos.
+      V. Eliminarlos defectos.
+      ¿Cuál de los siguientes enumeran los objetivos comunes de las l
+      pruebas?`,
       options: [
-        { id: 0, text: "A) Un banco que genera el 5% de sus ingresos de las comisiones de los cajeros automaticos, sufre una caida de su red debido a un defecto del software", isCorrect: true },
-        { id: 1, text: "B) El software de navegacion de un automovil muestra rutas a traves de rios utilizando el mismo icono tanto para balsa como un puente", isCorrect: false },
-        { id: 2, text: "C) El software de moniteroe de emisiones informa demasiado poco acerca el porcentaje de gases toxicos en una fabrica", isCorrect: false },
-        { id: 3, text: "D) Un encargado de ventas escribe la letra l en vez del numeral 1 donde este deberia haber estado, por lo que una propuesta importante de negocio no fue enviada", isCorrect: false },
+        { id: 0, text: `A) I, II, III, IV, y V.`, isCorrect: false },
+        { id: 1, text: `B) I, II, y IV.`, isCorrect: false },
+        { id: 2, text: `C) I, II, III y IV.`, isCorrect: true },
+        { id: 3, text: `D) I y V.`, isCorrect: false },
       ],
     },
     {
-      text: `Considerar la siguiente secuencia de eventos.
-      I. Un jefe decide eliminar las revisiones del cédigo enun intento de acelerar las pruebas.
-      II. Una operacién esencial de datos, de la cual otro subsistema depende en una aplicacion bancaria, fue eliminada por un programador quien realiza el trabajo de : mantenimiento en un fragmento de codigo desconocido
-      II. Un cajero automatico no puede actualizar la direccion de un cliente después de que la entrega de mantenimiento es instalada.
-      IV. El cliente impactado por el software de mala calidad que esta siendo utilizado para administrar su dinero, se cambia de banco. Cual de las siguientes afirmaciones es verdadera?`,
+      text: `Un probador participa en una revisión de requisitos e identifica
+      ambiguedades que podrían haber resultado en equivocaciones de
+      programación. Este es un ejemplo de ¿Cuál de los siguientes
+      propósitos de las pruebas?`,
       options: [
-        { id: 0, text: "A) I es el defecto, II es la causa rafz, y III y IV son efectos.", isCorrect: false },
-        { id: 1, text: "B) I es el efecto, Il es la causa rafz, y II y IV son defectos.", isCorrect: false },
-        { id: 2, text: "C) I es la causa raiz, II y III son defectos y IV es el efecto.", isCorrect: false },
-        { id: 3, text: "D) I es la causa raiz, II es el defecto, y III y IV son efectos.", isCorrect: true },
+        { id: 0, text: `A) Encontrar defectos.`, isCorrect: false },
+        { id: 1, text: `B) Proporcionar confianza.`, isCorrect: false },
+        { id: 2, text: `C) Prevenir defectos.`, isCorrect: true },
+        { id: 3, text: `D) Proporcionar información.`, isCorrect: false },
       ],
     },
     {
-      text: `Cual de los siguientes es el mejor ejemplo de por que las pruebas son necesarias?`,
+      text: `¿Cuál de los siguientes es un ejemplo de la depuración?`,
       options: [
-        { id: 0, text: "A) Los Jefes de proyectos escriben los planes del proyecto. Los interesados del proyecto no siempre revisan los planes del proyecto.", isCorrect: false },
-        { id: 1, text: "B) El software moderno puede contener mas de un millon de lineas de codigo. Segun estudios de la industria, el programador promedio de C, introduce un defecto por cada 25 lineas de codigo.", isCorrect: true },
-        { id: 2, text: " C) Los usuarios tienen ideas inusuales acerca de lo que el software deberia poder hacer. Los programadores no entienden a los usuarios.", isCorrect: false },
-        { id: 3, text: "D) El personal del soporte técnico confia en soluciones alternativas para asistir a los clientes con defectos conocidos Los probadores son las unicas personas que encuentran soluciones alternativas para los defectos.", isCorrect: false },
+        { id: 0, text: `A) La observación de una anomalía.`, isCorrect: false },
+        { id: 1, text: `B) La repetición de la prueba de una corrección del defecto.`, isCorrect: false },
+        { id: 2, text: `C) La preselección de un defecto.`, isCorrect: false },
+        { id: 3, text: `D) La corrección de un defecto.`, isCorrect: true },
       ],
     },
     {
-      text: `¿Cuál de los siguientes es un ejemplo de que las pruebas contribuyen a mejorar la calidad?`,
+      text: `¿Cuáles actividades están involucradas en las pruebas?`,
       options: [
-        { id: 0, text: "A) Un Jefe de proyecto le pide a un líder de pruebas que estime el esfuerzo de las pruebas.", isCorrect: false },
-        { id: 1, text: "B) Un probador instala un ítem de pruebas en el entorno de pruebas.", isCorrect: false },
-        { id: 2, text: "C) Un probador encuentra un defecto que es resuelto antes de la liberación.", isCorrect: true },
-        { id: 3, text: "D) Un líder de pruebas escribe un informe del resumen de las pruebas.", isCorrect: false },
-      ],
-    },
-    {
-      text: `¿Hay la misma relación entre el significado de las palabras “equivocación” y “error” que entre los siguientes pares de palabras?`,
-      options: [
-        { id: 0, text: `A) “Falla” y “bug”.`, isCorrect: false },
-        { id: 1, text: `B) “Falla” y “defecto”.`, isCorrect: false },
-        { id: 2, text: `C) “Error” y “defecto”.`, isCorrect: false },
-        { id: 3, text: `D) “Defecto” y “bug”.`, isCorrect: true },
-      ],
-    },
-    {
-      text: `Un componente de calidad es el que:`,
-      options: [
-        { id: 0, text: `A) Satisface las necesidades del usuario y cliente.`, isCorrect: true },
-        { id: 1, text: `B) Fue terminado a tiempo`, isCorrect: false },
-        { id: 2, text: `C) Requirió menos esfuerzo que la cantidad estimada.`, isCorrect: false },
-        { id: 3, text: `D) Estuvo sujeto a una revisión de código.`, isCorrect: false },
+        { id: 0, text: `A) Las actividades al final del ciclo de vida del software.`, isCorrect: false },
+        { id: 1, text: `B) Sólo las actividades que evalúan los productos del software.`, isCorrect: false },
+        { id: 2, text: `C) Lasactividades que involucran la ejecución de una prueba por el componente o el sistema sometido a pruebas.`, isCorrect: false },
+        { id: 3, text: `D) Las actividades a través de todo el ciclo de vida del software, incluyendo la planificación, preparación y evaluación.`, isCorrect: true },
       ],
     },
   ];
