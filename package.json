@@ -2,6 +2,7 @@
   "name": "mock-quiz-project",
   "version": "1.0.0",
   "description": "mock quiz project",
+  "private": true,
   "main": "index.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
@@ -44,6 +45,5 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/andres-uzeda/mock-quiz-project"
-  },
-  "homepage": "https://github.com/andres-uzeda/mock-quiz-project#readme"
+  }
 }
