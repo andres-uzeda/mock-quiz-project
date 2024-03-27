@@ -8,64 +8,84 @@ function App() {
   const [score, setScore] = useState(0);
 
   const questions = [
+    // Start 11
     {
-      text: "Cual de los siguientes escenarios describen una forma en la cual un defecto del software puede causar principalmente y directamente daños a una compañia",
+      text: `Considerar el siguiente escenario. Usted está probando un producto
+      y ha encontrado 100 defectos. Dos tercios de esos defectos están en la
+      interfaz de usuario y los módulos del control de acceso, mientras
+      que los restantes 33 están esparcidos entre los otros 6 módulos.
+      ¿Cuál de los siguientes es el principio que más aplica a este
+      escenario?`,
       options: [
-        { id: 0, text: "A) Un banco que genera el 5% de sus ingresos de las comisiones de los cajeros automaticos, sufre una caida de su red debido a un defecto del software", isCorrect: true },
-        { id: 1, text: "B) El software de navegacion de un automovil muestra rutas a traves de rios utilizando el mismo icono tanto para balsa como un puente", isCorrect: false },
-        { id: 2, text: "C) El software de moniteroe de emisiones informa demasiado poco acerca el porcentaje de gases toxicos en una fabrica", isCorrect: false },
-        { id: 3, text: "D) Un encargado de ventas escribe la letra l en vez del numeral 1 donde este deberia haber estado, por lo que una propuesta importante de negocio no fue enviada", isCorrect: false },
+        { id: 0, text: `A) El agrupamiento de defectos.`, isCorrect: true },
+        { id: 1, text: `B) La falacia de la ausencia de errores.`, isCorrect: false },
+        { id: 2, text: `C) Las pruebas exhaustivas son imposibles.`, isCorrect: false },
+        { id: 3, text: `D) Controlar activamente el diseño de las pruebas mientras realiza esas pruebas.`, isCorrect: false },
       ],
     },
     {
-      text: `Considerar la siguiente secuencia de eventos.
-      I. Un jefe decide eliminar las revisiones del cédigo enun intento de acelerar las pruebas.
-      II. Una operacién esencial de datos, de la cual otro subsistema depende en una aplicacion bancaria, fue eliminada por un programador quien realiza el trabajo de : mantenimiento en un fragmento de codigo desconocido
-      II. Un cajero automatico no puede actualizar la direccion de un cliente después de que la entrega de mantenimiento es instalada.
-      IV. El cliente impactado por el software de mala calidad que esta siendo utilizado para administrar su dinero, se cambia de banco. Cual de las siguientes afirmaciones es verdadera?`,
+      text: `Las pruebas exhaustivas involucran:`,
       options: [
-        { id: 0, text: "A) I es el defecto, II es la causa rafz, y III y IV son efectos.", isCorrect: false },
-        { id: 1, text: "B) I es el efecto, Il es la causa rafz, y II y IV son defectos.", isCorrect: false },
-        { id: 2, text: "C) I es la causa raiz, II y III son defectos y IV es el efecto.", isCorrect: false },
-        { id: 3, text: "D) I es la causa raiz, II es el defecto, y III y IV son efectos.", isCorrect: true },
+        { id: 0, text: `A) Todos los pares de los valores de entrada y las precondiciones`, isCorrect: false },
+        { id: 1, text: `B) Por lo menos uno de cada valor posible de las entradas y las precondiciones.`, isCorrect: false },
+        { id: 2, text: `C) Todas las combinaciones de los valores de entrada y las precondiciones.`, isCorrect: true },
+        { id: 3, text: `D) Todas las combinaciones de los valores de entrada y salida.`, isCorrect: false },
       ],
     },
     {
-      text: `Cual de los siguientes es el mejor ejemplo de por que las pruebas son necesarias?`,
+      text: `¿Cuál de las siguientes tareas de las pruebas es una parte de la
+      actividad de la planificación de las pruebas?`,
       options: [
-        { id: 0, text: "A) Los Jefes de proyectos escriben los planes del proyecto. Los interesados del proyecto no siempre revisan los planes del proyecto.", isCorrect: false },
-        { id: 1, text: "B) El software moderno puede contener mas de un millon de lineas de codigo. Segun estudios de la industria, el programador promedio de C, introduce un defecto por cada 25 lineas de codigo.", isCorrect: true },
-        { id: 2, text: " C) Los usuarios tienen ideas inusuales acerca de lo que el software deberia poder hacer. Los programadores no entienden a los usuarios.", isCorrect: false },
-        { id: 3, text: "D) El personal del soporte técnico confia en soluciones alternativas para asistir a los clientes con defectos conocidos Los probadores son las unicas personas que encuentran soluciones alternativas para los defectos.", isCorrect: false },
+        { id: 0, text: `A) Medir y analizar los resultados.`, isCorrect: false },
+        { id: 1, text: `B) Determinar los criterios de salida`, isCorrect: true },
+        { id: 2, text: `C) Revisar las bases de las pruebas.`, isCorrect: false },
+        { id: 3, text: `D) Comprobar los registros de las pruebas contra los criterios de salida.`, isCorrect: false },
       ],
     },
     {
-      text: `¿Cuál de los siguientes es un ejemplo de que las pruebas contribuyen a mejorar la calidad?`,
+      text: `¿Por qué ejecutamos las pruebas de confirmación?`,
       options: [
-        { id: 0, text: "A) Un Jefe de proyecto le pide a un líder de pruebas que estime el esfuerzo de las pruebas.", isCorrect: false },
-        { id: 1, text: "B) Un probador instala un ítem de pruebas en el entorno de pruebas.", isCorrect: false },
-        { id: 2, text: "C) Un probador encuentra un defecto que es resuelto antes de la liberación.", isCorrect: true },
-        { id: 3, text: "D) Un líder de pruebas escribe un informe del resumen de las pruebas.", isCorrect: false },
+        { id: 0, text: `A) Para demostrar la aptitud para el propósito.`, isCorrect: false },
+        { id: 1, text: `B) Para asegurar que los defectos no han sido introducidos en las áreas no modificadas.`, isCorrect: false },
+        { id: 2, text: `C) Para determinar si un componente o sistema satisface o no las necesidades de un usuario/ cliente.`, isCorrect: false },
+        { id: 3, text: `D) Para verificar el éxito de las acciones correctivas`, isCorrect: true },
       ],
     },
     {
-      text: `¿Hay la misma relación entre el significado de las palabras “equivocación” y “error” que entre los siguientes pares de palabras?`,
+      text: `¿Por qué es importante declarar claramente los objetivos de
+      pruebas?`,
       options: [
-        { id: 0, text: `A) “Falla” y “bug”.`, isCorrect: false },
-        { id: 1, text: `B) “Falla” y “defecto”.`, isCorrect: false },
-        { id: 2, text: `C) “Error” y “defecto”.`, isCorrect: false },
-        { id: 3, text: `D) “Defecto” y “bug”.`, isCorrect: true },
+        { id: 0, text: `A) Porque la gente tiende a alinear sus planes con los objetivos establecidos por la gerencia.`, isCorrect: true },
+        { id: 1, text: `B) Porque la cobertura debe ser medida contra los objetivos de las pruebas.`, isCorrect: false },
+        { id: 2, text: `C) Porque el nivel de riesgo del producto es determinado por 1os objetivos de las pruebas.`, isCorrect: false },
+        { id: 3, text: `D) Porque la identificación de los objetivos de las pruebas es una tarea principal en las actividades de planificación.`, isCorrect: false },
       ],
     },
     {
-      text: `Un componente de calidad es el que:`,
+      text: `Para mantener la motivación, los probadores y desarrolladores :
+      necesitan por igual la mentalidad correcta. Los buenos
+      desarrolladores deben tener una actitud positiva acerca de su
+      habilidad y la habilidad de su equipo para tratar los riesgos tanto de
+      de negocios como técnicos que confrontan sus proyectos de
+      programación. ¿Cuál de las siguientes describe exactamente la
+      mentalidad diferente de un buen probador?`,
       options: [
-        { id: 0, text: `A) Satisface las necesidades del usuario y cliente.`, isCorrect: true },
-        { id: 1, text: `B) Fue terminado a tiempo`, isCorrect: false },
-        { id: 2, text: `C) Requirió menos esfuerzo que la cantidad estimada.`, isCorrect: false },
-        { id: 3, text: `D) Estuvo sujeto a una revisión de código.`, isCorrect: false },
+        { id: 0, text: `A) Los buenos probadores identifican fallas con la intención de ser críticos acerca del producto y el autor.`, isCorrect: false },
+        { id: 1, text: `B) Los buenos probadores dicen la verdad como la ven y noestán terriblemente preocupados en cómo la gente va a reaccionar a esos hechos.`, isCorrect: false },
+        { id: 2, text: `C) Los buenos probadores son profesionales pesimistas que creen que el producto contiene probablemente defectos y que ellos pueden encontrarlos.`, isCorrect: true },
+        { id: 3, text: `D) Los buenos probadores se enfocan más en los riesgos técnicos que en los riesgos de negocios, porque ellos quieren encontrar tantos defectos como sea posible`, isCorrect: false },
       ],
     },
+    {
+      text: `¿Cuál meta fomenta la independencia de las pruebas?`,
+      options: [
+        { id: 0, text: `A) La reducción de los costos de las pruebas antes de la liberación.`, isCorrect: false },
+        { id: 1, text: `B) La maximización de las pruebas por medio de aquellos que están familiarizados con el código.`, isCorrect: false },
+        { id: 2, text: `C) El mejoramiento de la comunicación y las relaciones entre los probadores y otros.`, isCorrect: false },
+        { id: 3, text: `D) Proporcionar un mayor grado de objetividad y reducir la parcialidad del autor.`, isCorrect: true },
+      ],
+    },
+    // Finish 17
   ];
 
   // Helper Functions
