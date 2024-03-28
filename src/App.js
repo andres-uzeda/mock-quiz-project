@@ -8,62 +8,211 @@ function App() {
   const [score, setScore] = useState(0);
 
   const questions = [
+    // start 18
     {
-      text: "Cual de los siguientes escenarios describen una forma en la cual un defecto del software puede causar principalmente y directamente daños a una compañia",
+      text: `Un probador está trabajando en un proyecto importante para su
+      compañía, la cual es grande y cotiza en la bolsa. El encuentra
+      muchos defectos durante las pruebas, lo cual él cree que provocará
+      que el proyecto fracase, con un efecto negativo en los precios de las
+      acciones de la compañía. El comparte esta información con su primo,
+      quién utiliza esta información para colocar negocios en contra de la
+      compañía en el mercado de acciones. Este es un ejemplo de falta de
+      ética relacionada a ¿Cuál de las siguientes del código de éticas del
+      probador?`,
       options: [
-        { id: 0, text: "A) Un banco que genera el 5% de sus ingresos de las comisiones de los cajeros automaticos, sufre una caida de su red debido a un defecto del software", isCorrect: true },
-        { id: 1, text: "B) El software de navegacion de un automovil muestra rutas a traves de rios utilizando el mismo icono tanto para balsa como un puente", isCorrect: false },
-        { id: 2, text: "C) El software de moniteroe de emisiones informa demasiado poco acerca el porcentaje de gases toxicos en una fabrica", isCorrect: false },
-        { id: 3, text: "D) Un encargado de ventas escribe la letra l en vez del numeral 1 donde este deberia haber estado, por lo que una propuesta importante de negocio no fue enviada", isCorrect: false },
+        { id: 0, text: `A) El cliente y empleador.`, isCorrect: true },
+        { id: 1, text: `B) El público.`, isCorrect: false },
+        { id: 2, text: `C) El juicio.`, isCorrect: false },
+        { id: 3, text: `D) La gestión.`, isCorrect: false },
       ],
     },
+    // 19
     {
-      text: `Considerar la siguiente secuencia de eventos.
-      I. Un jefe decide eliminar las revisiones del cédigo enun intento de acelerar las pruebas.
-      II. Una operacién esencial de datos, de la cual otro subsistema depende en una aplicacion bancaria, fue eliminada por un programador quien realiza el trabajo de : mantenimiento en un fragmento de codigo desconocido
-      II. Un cajero automatico no puede actualizar la direccion de un cliente después de que la entrega de mantenimiento es instalada.
-      IV. El cliente impactado por el software de mala calidad que esta siendo utilizado para administrar su dinero, se cambia de banco. Cual de las siguientes afirmaciones es verdadera?`,
+      text: `Un objetivo común de las pruebas es el suministro de información.
+      Las pruebas deben proporcionar la suficiente información a los
+      interesados del negocio para tomar decisiones informadas acerca de
+      la versión del software o sistema que está siendo probado. ¿Cuál de
+      las siguientes es una actividad fundamental del proceso de pruebas,
+      durante la cual es evaluada la cantidad suficiente de las pruebas y la
+      información resultante?`,
       options: [
-        { id: 0, text: "A) I es el defecto, II es la causa rafz, y III y IV son efectos.", isCorrect: false },
-        { id: 1, text: "B) I es el efecto, Il es la causa rafz, y II y IV son defectos.", isCorrect: false },
-        { id: 2, text: "C) I es la causa raiz, II y III son defectos y IV es el efecto.", isCorrect: false },
-        { id: 3, text: "D) I es la causa raiz, II es el defecto, y III y IV son efectos.", isCorrect: true },
+        { id: 0, text: `A) El análisis y diseño.`, isCorrect: false },
+        { id: 1, text: `B) La implementación y ejecución.`, isCorrect: false },
+        { id: 2, text: `C) La evaluación del criterio de salida y la creación de informes.`, isCorrect: true },
+        { id: 3, text: `D) La especificación de requisitos.`, isCorrect: false },
       ],
     },
+    // 20
     {
-      text: `Cual de los siguientes es el mejor ejemplo de por que las pruebas son necesarias?`,
+      text: `Un jefe de pruebas presenta un informe del resumen del estado de
+      las pruebas al equipo del proyecto. Basado en este informe, el
+      equipo del proyecto decide extender el período de la ejecución de las
+      pruebas por tres semanas para permitir que defectos adicionales
+      sean encontrados y corregidos. ¿Qué ilustra esta situación?`,
       options: [
-        { id: 0, text: "A) Los Jefes de proyectos escriben los planes del proyecto. Los interesados del proyecto no siempre revisan los planes del proyecto.", isCorrect: false },
-        { id: 1, text: "B) El software moderno puede contener mas de un millon de lineas de codigo. Segun estudios de la industria, el programador promedio de C, introduce un defecto por cada 25 lineas de codigo.", isCorrect: true },
-        { id: 2, text: " C) Los usuarios tienen ideas inusuales acerca de lo que el software deberia poder hacer. Los programadores no entienden a los usuarios.", isCorrect: false },
-        { id: 3, text: "D) El personal del soporte técnico confia en soluciones alternativas para asistir a los clientes con defectos conocidos Los probadores son las unicas personas que encuentran soluciones alternativas para los defectos.", isCorrect: false },
+        { id: 0, text: `A) La contribución de las pruebas a la más alta calidad.`, isCorrect: true },
+        { id: 1, text: `B) El proceso básico de pruebas.`, isCorrect: false },
+        { id: 2, text: `C) La mentalidad opuesta de los desarrolladores y probadores.`, isCorrect: false },
+        { id: 3, text: `D) La falacia de la ausencia de errores.`, isCorrect: false },
       ],
     },
+    // 21
     {
-      text: `¿Cuál de los siguientes es un ejemplo de que las pruebas contribuyen a mejorar la calidad?`,
+      text: `Considerar lo siguiente:
+      I. Prevenir los defectos. 
+      
+      II. Er Eliminar los defectos.
+      
+      III. — Ganarla confianza en el sistema.
+      
+      IV. — Proporcionar información.
+      
+      V. Encontrar los defectos.
+      Cuál de las siguientes afirmaciones es verdadera?`,
       options: [
-        { id: 0, text: "A) Un Jefe de proyecto le pide a un líder de pruebas que estime el esfuerzo de las pruebas.", isCorrect: false },
-        { id: 1, text: "B) Un probador instala un ítem de pruebas en el entorno de pruebas.", isCorrect: false },
-        { id: 2, text: "C) Un probador encuentra un defecto que es resuelto antes de la liberación.", isCorrect: true },
-        { id: 3, text: "D) Un líder de pruebas escribe un informe del resumen de las pruebas.", isCorrect: false },
+        { id: 0, text: `A) Todos son objetivos comunes de las pruebas.`, isCorrect: false },
+        { id: 1, text: `B) I, II, III, y V son objetivos comunes de las pruebas.`, isCorrect: false },
+        { id: 2, text: `C) I, II IV, y V son objetivos comunes de las pruebas.`, isCorrect: true },
+        { id: 3, text: `D) II y V son objetivos comunes de las pruebas.`, isCorrect: false },
       ],
     },
+    // 22
     {
-      text: `¿Hay la misma relación entre el significado de las palabras “equivocación” y “error” que entre los siguientes pares de palabras?`,
+      text: `¿Cuál de los siguientes es un principio general de las pruebas?`,
       options: [
-        { id: 0, text: `A) “Falla” y “bug”.`, isCorrect: false },
-        { id: 1, text: `B) “Falla” y “defecto”.`, isCorrect: false },
-        { id: 2, text: `C) “Error” y “defecto”.`, isCorrect: false },
-        { id: 3, text: `D) “Defecto” y “bug”.`, isCorrect: true },
+        { id: 0, text: `A) La planificación y el control.`, isCorrect: false },
+        { id: 1, text: `B) Las pruebas tempranas.`, isCorrect: true },
+        { id: 2, text: `C) El análisis y diseño.`, isCorrect: false },
+        { id: 3, text: `D) La implementación y ejecución.`, isCorrect: false },
       ],
     },
+    //23
     {
-      text: `Un componente de calidad es el que:`,
+      text: `Un probador está realizando una prueba. El observa una inusual
+      cantidad de accesos a la red durante un período, cuando él sabe que
+      la aplicación no debería acceder a la red. Aún cuando la prueba no
+      especifica la comparación del acceso real a la red con un resultado
+      esperado, el probador decide investigar. Éste es un ejemplo ¿De
+      qué?`,
       options: [
-        { id: 0, text: `A) Satisface las necesidades del usuario y cliente.`, isCorrect: true },
-        { id: 1, text: `B) Fue terminado a tiempo`, isCorrect: false },
-        { id: 2, text: `C) Requirió menos esfuerzo que la cantidad estimada.`, isCorrect: false },
-        { id: 3, text: `D) Estuvo sujeto a una revisión de código.`, isCorrect: false },
+        { id: 0, text: `A) Una mentalidad curiosa del probador.`, isCorrect: true },
+        { id: 1, text: `B) Una comunicación efectiva del probador con el desarrollo.`, isCorrect: false },
+        { id: 2, text: `C) Un probador realizando pruebas exhaustivas.`, isCorrect: false },
+        { id: 3, text: `D) Un probador realizando las pruebas de mantenimiento.`, isCorrect: false },
+      ],
+    },
+    //24
+    {
+      text: `¿Qué son las pruebas de regresión?`,
+      options: [
+        { id: 0, text: `A) Las pruebas que ejecutan los casos de prueba que fallaron la última vez que fueron ejecutados.`, isCorrect: false },
+        { id: 1, text: `B) Las pruebas de un programa ya antes probado tras a una modificación.`, isCorrect: true },
+        { id: 2, text: `C) Un sinónimo de pruebas de confirmación.`, isCorrect: false },
+        { id: 3, text: `D) Las pruebas para determinar la fiabilidad de un producto de software.`, isCorrect: false },
+      ],
+    },
+    //25
+    {
+      text: `Está ejecutando una prueba escrita que otros probadores la han
+      ejecutado previamente. Adicionalmente esta prueba ha encontrado
+      defectos previamente, y esos defectos han sido confirmados para ser
+      corregidos. El jefe de pruebas le recomienda a usted a variar la
+      forma específica en la cual usted ejecuta las pruebas, así como el
+      orden de ciertas acciones, la utilización del ratón versus las teclas de
+      acceso rápido y los valores de entrada específicos, basados en la
+      manera en que los usuarios utilizarán el sistema. ¿Cuál de los
+      siguientes es un principio de las pruebas que podría explicar la
+      indicación del jefe de pruebas?`,
+      options: [
+        { id: 0, text: `A) Las pruebas tempranas.`, isCorrect: false },
+        { id: 1, text: `B) Las pruebas aleatorias.`, isCorrect: false },
+        { id: 2, text: `C) La paradoja del pesticida.`, isCorrect: true },
+        { id: 3, text: `D) La falacia de la ausencia de errores.`, isCorrect: false },
+      ],
+    },
+    //26
+    {
+      text: `Las pruebas pueden:`,
+      options: [
+        { id: 0, text: `A) Medir la calidad del software según los defectos encontrados.`, isCorrect: true },
+        { id: 1, text: `B) Eliminar la posibilidad de que no hay defectos no descubiertos.`, isCorrect: false },
+        { id: 2, text: `C) Encontrar nuevos defectos a través de la repetición de las mismas pruebas.`, isCorrect: false },
+        { id: 3, text: `D) Encontrar, analizar y eliminar las causas de las fallas.`, isCorrect: false },
+      ],
+    },
+    //27
+    {
+      text: `¿Qué es cierto de un sistema decalidad?`,
+      options: [
+        { id: 0, text: `A) Es seguro.`, isCorrect: false },
+        { id: 1, text: `B) Satisface los requisitos especificados, las necesidades y las expectativas del cliente y los usuarios.`, isCorrect: true },
+        { id: 2, text: `C) Cuesta más que otros sistemas con las mismas características.`, isCorrect: false },
+        { id: 3, text: `D) Fue entregado a tiempo y dentro del presupuesto.`, isCorrect: false },
+      ],
+    },
+    //28
+    {
+      text: `¿Qué es cierto de un sistema decalidad?`,
+      options: [
+        { id: 0, text: `A) Es seguro.`, isCorrect: false },
+        { id: 1, text: `B) Satisface los requisitos especificados, las necesidades y las expectativas del cliente y los usuarios.`, isCorrect: false },
+        { id: 2, text: `C) Cuesta más que otros sistemas con las mismas características.`, isCorrect: false },
+        { id: 3, text: `D) Fue entregado a tiempo y dentro del presupuesto.`, isCorrect: true },
+      ],
+    },
+    //29
+    {
+      text: `¿Cuál de los siguientes es un objetivo común de las pruebas?`,
+      options: [
+        { id: 0, text: `A) Prevenir los defectos.`, isCorrect: true },
+        { id: 1, text: `B) Eliminar los defectos.`, isCorrect: false },
+        { id: 2, text: `C) Comparar los resultados reales con los resultados esperados.`, isCorrect: false },
+        { id: 3, text: `D) Analizar la causa de la falla.`, isCorrect: false },
+      ],
+    },
+    //30
+    {
+      text: `¿Cuál de los siguientes es un principio general de las pruebas?`,
+      options: [
+        { id: 0, text: `A) Las pruebas exploratorias.`, isCorrect: false },
+        { id: 1, text: `B) El agrupamiento de defectos.`, isCorrect: true },
+        { id: 2, text: `C) La evaluación de los criterios de salida.`, isCorrect: false },
+        { id: 3, text: `D) El enmascaramiento de defectos.`, isCorrect: false },
+      ],
+    },
+    //31
+    {
+      text: `¿Cuál de las siguientes es una actividad básica de las pruebas?`,
+      options: [
+        { id: 0, text: `A) Depuración.`, isCorrect: false },
+        { id: 1, text: `B) La implementación y ejecución de las pruebas.`, isCorrect: true },
+        { id: 2, text: `C) La construcción diaria.`, isCorrect: false },
+        { id: 3, text: `D) Las pruebas de confirmación.`, isCorrect: false },
+      ],
+    },
+    //32
+    {
+      text: `Un programador está escribiendo y ejecutando las pruebas unitarias
+      contra el código que ha escrito. ¿Cuál de las siguientes es una
+      mentalidad de probador que el programador debería adoptar para
+      realizar estas pruebas unitarias efectivamente?`,
+      options: [
+        { id: 0, text: `A) Las buenas habilidades de comunicación.`, isCorrect: false },
+        { id: 1, text: `B) La cobertura de código.`, isCorrect: false },
+        { id: 2, text: `C) El efecto sonda.`, isCorrect: false },
+        { id: 3, text: `D) La atención al detalle.`, isCorrect: true },
+      ],
+    },
+    //33
+    {
+      text: `Un programador está trabajando en un código muy complejo. ¿Cual
+      de los siguientes es un principio general de las pruebas que puede
+      afectar este trabajo?`,
+      options: [
+        { id: 0, text: `A) El agrupamiento de defectos.`, isCorrect: true },
+        { id: 1, text: `B) La paradoja del pesticida.`, isCorrect: false },
+        { id: 2, text: `C) Las pruebas tempranas.`, isCorrect: false },
+        { id: 3, text: `D) Las pruebas de componente.`, isCorrect: false },
       ],
     },
   ];
