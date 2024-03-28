@@ -8,62 +8,94 @@ function App() {
   const [score, setScore] = useState(0);
 
   const questions = [
+    //34
     {
-      text: "Cual de los siguientes escenarios describen una forma en la cual un defecto del software puede causar principalmente y directamente daños a una compañia",
+      text: `Ud. está trabajando como el único probador en un proyecto
+      pequeño con un modelo V, que acaba de publicar un borrador de
+      la especificación de los requisitos. Considere las siguientes
+      posibilidades:
+      
+      I) Ud. debería participar en una revisión del borrador.
+      
+      II) Ud. debería utilizar el borrador de la especificación de
+      los requisitos para empezar el análisis y diseño de las
+      pruebas de aceptación.
+      
+      III) — El borrador de la especificación de los requisitos puede
+      servir como una base de las pruebas.
+      
+      IV) El borrador de la especificación de los requisitos puede
+      servir como una base inmodificable de las pruebas.
+      ¿Cuál de las siguientes afirmaciones es verdadera?
+      A. I, II, III, y IV son todas verdaderas.
+      B. II, III, y IV son verdaderas.
+      C. Sólo la I es verdadera.
+      D. I, II, y III son verdaderas.`,
       options: [
-        { id: 0, text: "A) Un banco que genera el 5% de sus ingresos de las comisiones de los cajeros automaticos, sufre una caida de su red debido a un defecto del software", isCorrect: true },
-        { id: 1, text: "B) El software de navegacion de un automovil muestra rutas a traves de rios utilizando el mismo icono tanto para balsa como un puente", isCorrect: false },
-        { id: 2, text: "C) El software de moniteroe de emisiones informa demasiado poco acerca el porcentaje de gases toxicos en una fabrica", isCorrect: false },
-        { id: 3, text: "D) Un encargado de ventas escribe la letra l en vez del numeral 1 donde este deberia haber estado, por lo que una propuesta importante de negocio no fue enviada", isCorrect: false },
+        { id: 0, text: `A) I, II, III, y IV son todas verdaderas.`, isCorrect: false },
+        { id: 1, text: `B) II, III, y IV son verdaderas.`, isCorrect: false },
+        { id: 2, text: `C) Sólo la I es verdadera.`, isCorrect: false },
+        { id: 3, text: `D) I, II, y III son verdaderas.`, isCorrect: false },
       ],
     },
+    //35
     {
-      text: `Considerar la siguiente secuencia de eventos.
-      I. Un jefe decide eliminar las revisiones del cédigo enun intento de acelerar las pruebas.
-      II. Una operacién esencial de datos, de la cual otro subsistema depende en una aplicacion bancaria, fue eliminada por un programador quien realiza el trabajo de : mantenimiento en un fragmento de codigo desconocido
-      II. Un cajero automatico no puede actualizar la direccion de un cliente después de que la entrega de mantenimiento es instalada.
-      IV. El cliente impactado por el software de mala calidad que esta siendo utilizado para administrar su dinero, se cambia de banco. Cual de las siguientes afirmaciones es verdadera?`,
+      text: `¿Cuál de las siguientes afirmaciones es verdadera acerca de la
+      adaptación de los modelos de desarrollo de software?`,
       options: [
-        { id: 0, text: "A) I es el defecto, II es la causa rafz, y III y IV son efectos.", isCorrect: false },
-        { id: 1, text: "B) I es el efecto, Il es la causa rafz, y II y IV son defectos.", isCorrect: false },
-        { id: 2, text: "C) I es la causa raiz, II y III son defectos y IV es el efecto.", isCorrect: false },
-        { id: 3, text: "D) I es la causa raiz, II es el defecto, y III y IV son efectos.", isCorrect: true },
+        { id: 0, text: `A) Ud. puede adaptar los modelos para que se acomoden a las varias características de los proyectos y productos.`, isCorrect: false },
+        { id: 1, text: `B) No debería proceder así, porque los que originaron los modelos son expertos.`, isCorrect: false },
+        { id: 2, text: `C) No debería adaptar los modelos basados en los resultado de las pruebas, para evitar comprometer la calidad.`, isCorrect: false },
+        { id: 3, text: `D) No debería preocuparse por esos modelos, porque no afectan las pruebas.`, isCorrect: false },
       ],
     },
+    //36
     {
-      text: `Cual de los siguientes es el mejor ejemplo de por que las pruebas son necesarias?`,
+      text: `¿Cuál de las siguientes es una característica de buenas pruebas en
+      cualquier proyecto, en cualquier nivel de prueba,
+      independientemente del modelo del ciclo de vida?`,
       options: [
-        { id: 0, text: "A) Los Jefes de proyectos escriben los planes del proyecto. Los interesados del proyecto no siempre revisan los planes del proyecto.", isCorrect: false },
-        { id: 1, text: "B) El software moderno puede contener mas de un millon de lineas de codigo. Segun estudios de la industria, el programador promedio de C, introduce un defecto por cada 25 lineas de codigo.", isCorrect: true },
-        { id: 2, text: " C) Los usuarios tienen ideas inusuales acerca de lo que el software deberia poder hacer. Los programadores no entienden a los usuarios.", isCorrect: false },
-        { id: 3, text: "D) El personal del soporte técnico confia en soluciones alternativas para asistir a los clientes con defectos conocidos Los probadores son las unicas personas que encuentran soluciones alternativas para los defectos.", isCorrect: false },
+        { id: 0, text: `A) El objetivo principal de las pruebas es encontrar tantos defectos como sea posible.`, isCorrect: false },
+        { id: 1, text: `B) Las pruebas de regresión no son afectadas por el modelo del ciclo de vida.`, isCorrect: false },
+        { id: 2, text: `C) Los probadores deberían participar en la revisión de documentos.`, isCorrect: false },
+        { id: 3, text: `D) Los probadores no deberían saber acercade los detalles estructurales de los productos que ellos están probando.`, isCorrect: false },
       ],
     },
+    //37
     {
-      text: `¿Cuál de los siguientes es un ejemplo de que las pruebas contribuyen a mejorar la calidad?`,
+      text: `¿Qué es la validación?`,
       options: [
-        { id: 0, text: "A) Un Jefe de proyecto le pide a un líder de pruebas que estime el esfuerzo de las pruebas.", isCorrect: false },
-        { id: 1, text: "B) Un probador instala un ítem de pruebas en el entorno de pruebas.", isCorrect: false },
-        { id: 2, text: "C) Un probador encuentra un defecto que es resuelto antes de la liberación.", isCorrect: true },
-        { id: 3, text: "D) Un líder de pruebas escribe un informe del resumen de las pruebas.", isCorrect: false },
+        { id: 0, text: `A) La confirmación de que los requisitos especificados se han cumplido.`, isCorrect: false },
+        { id: 1, text: `B) La confirmación de que los requisitos para una utilización o aplicación intencionada y específica han sido cumplidos.`, isCorrect: false },
+        { id: 2, text: `C) El proceso de probar un sistema integrado para verificar que cumple los requisitos especificados.`, isCorrect: false },
+        { id: 3, text: `D) La parte de la gestión de la calidad enfocada en proporcionar la confianza en que los requisitos serán cumplidos.`, isCorrect: false },
       ],
     },
+    //38
     {
-      text: `¿Hay la misma relación entre el significado de las palabras “equivocación” y “error” que entre los siguientes pares de palabras?`,
+      text: `Considere los siguientes niveles de madurez del CMMI:
+      I) Inicial.
+      II) Optimizado.
+      III) Definido.
+      IV) Gestionado.
+      V) Gestionado cuantitativamente.
+      ¿Cuál afirmación pone estos niveles en su orden correcto?`,
       options: [
-        { id: 0, text: `A) “Falla” y “bug”.`, isCorrect: false },
-        { id: 1, text: `B) “Falla” y “defecto”.`, isCorrect: false },
-        { id: 2, text: `C) “Error” y “defecto”.`, isCorrect: false },
-        { id: 3, text: `D) “Defecto” y “bug”.`, isCorrect: true },
+        { id: 0, text: `A) I, II, III, IV, V.`, isCorrect: false },
+        { id: 1, text: `B) I, III, IV, V, II.`, isCorrect: false },
+        { id: 2, text: `C) I, IV, III, V, II.`, isCorrect: false },
+        { id: 3, text: `D) II, I, III, IV, V.`, isCorrect: false },
       ],
     },
+    //39
     {
-      text: `Un componente de calidad es el que:`,
+      text: `¿Cuál de los siguientes se aborda como una sección principal en
+      el estándar IEEE 12207?`,
       options: [
-        { id: 0, text: `A) Satisface las necesidades del usuario y cliente.`, isCorrect: true },
-        { id: 1, text: `B) Fue terminado a tiempo`, isCorrect: false },
-        { id: 2, text: `C) Requirió menos esfuerzo que la cantidad estimada.`, isCorrect: false },
-        { id: 3, text: `D) Estuvo sujeto a una revisión de código.`, isCorrect: false },
+        { id: 0, text: `A) Los principales procesos del ciclo de vida.`, isCorrect: false },
+        { id: 1, text: `B) Los criterios de suspensión/ reanudación.`, isCorrect: false },
+        { id: 2, text: `C) Las revisiones técnicas.`, isCorrect: false },
+        { id: 3, text: `D) Los refinamientos del Método.`, isCorrect: false },
       ],
     },
   ];
